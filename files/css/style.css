@@ -1,0 +1,261 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: normal 1em/1.3em Cairo;
+}
+
+ul, ol, dl {
+    list-style-type: none;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    height: 50px;
+    overflow: hidden;
+    background-color: #000000c4;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 3px 1px #777;
+    position: fixed;
+    top: 0;
+    z-index: 9999
+}
+
+.header .logo {
+    display: inline-block;
+    padding: 5px;
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header ul.main-navbar {
+    display: inline-block;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 10%;
+}
+.header ul.main-navbar li {
+    display: inline-block;
+    padding: 1.5em 5px 8px;
+    color: #ffffff;
+    position: relative;
+    font: bold 16px/1 Cairo;
+}
+.header ul.main-navbar li i.fa,
+.header ul.main-navbar li i.fas,
+.header ul.main-navbar li i.fab {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    color: #c7c8c9;
+}
+
+.header ul.main-navbar li:after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background:#0d65eb ;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.header ul.main-navbar li:hover:after {
+    width: 100%;
+    transition: all .4s ease-in-out;
+}
+.header ul.main-navbar li:first-child:after {
+    width: 100%;
+    transition: all .4s ease-in-out;
+}
+
+/* sections Style */
+/* Welcome Section */
+
+.section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.section.cta {
+    background: url('files/images/spmUM.png');
+    background-size: contain;
+    background-attachment: fixed;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: #000000aa;
+}
+
+.section.cta .overlay .content {
+    width: 60%;
+    margin: auto;
+    padding-top: 100px;
+}
+.section.featured .section-heading,
+.section.cta .section-heading,
+.section.welcome .section-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.section.featured .section-heading h2,
+.section.welcome .section-heading h2,
+.section.cta .section-heading h2 {
+    font: bolder 40px/1.5em Cairo;
+    color: #fff;
+    display: inline-block;
+    margin: 1em auto;
+    text-transform: uppercase;
+}
+.section.cta ul li {
+    color: #dedede;
+    font: normal 18px/1.5 "Cairo light"
+}
+
+.section.cta .buttons {
+    text-align: center;
+    padding: 1em;
+}
+.section.cta .buttons button {
+    font: bold 18px/1.5 cairo;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    color: #ccc;
+    display: inline-block;
+    margin: 3px;
+}
+.section.cta .buttons button.btn-start {
+    background:#0847a5 ;
+}
+.section.cta .buttons button.btn-start:hover {
+    background:#0066ff ;
+    box-shadow: 0 0 3px 1px #777;
+    color: #fff;
+}
+
+.section.cta .buttons button.btn-more {
+    background:#0e5e43 ;
+}
+.section.cta .buttons button.btn-more:hover {
+    background:#21be8a ;
+    box-shadow: 0 0 3px 1px #777;
+    color: #fff;
+}
+
+/* Welcome to website section styles */
+
+.section.welcome .content {
+    width: 80%;
+    margin: auto;
+}
+
+.section.featured .section-heading h2 {
+    color: #ffffff ;
+}
+
+.section.welcome .section-heading h2 {
+    color: #0153cf ;
+}
+
+.section ul.items {
+    /* border: 1px solid #ccc; */
+}
+
+.section ul.items li.item {
+    display: inline-block;
+    width: 28%;
+    margin: 0 2.5%;
+    height: 300px;
+    position: relative;
+    z-index: 3;
+    background-color: #ebebebef;
+    border: 1px solid #ccc;
+}
+
+.section ul.items li.item .item-icon {
+    font-size: 2.4em;
+    text-align: center;
+    padding: 0.3em;
+    color: #0066ff;
+    
+}
+.section ul.items li.item:before {
+    content: "";
+    display: block;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.section.welcome ul.items li.item:hover:before  {
+    width: 100%;
+    height: 100%;
+}
+.section ul.items li.item .item-title h3 {
+    padding: 0 1.2em;
+    font: 700 24px/1.5 Cairo;
+    text-align: center;
+    text-transform: uppercase;
+    color:  #0153cf;
+}
+
+
+.section ul.items li.item .item-feature p {
+    padding: 0 1.2em;
+    color:  #0066ff;
+    text-align: justify;
+}
+
+.section ul.items li.item .item-link {
+    display: inline-block;
+    float: right;
+    margin: 1em 2em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px 18px;
+    color: #0066ff;
+}
+.section.welcome ul.items li.item:hover .item-icon,
+.section.welcome ul.items li.item:hover .item-title h3,
+.section.welcome ul.items li.item:hover .item-feature p,
+.section.welcome ul.items li.item:hover .item-link{
+    color: #fff;
+    transition: all 0.3s .3s ease-in-out;
+}
+.section.welcome ul.items li.item:hover .item-link {
+    background-color: #0066ff;
+    cursor: pointer;
+}
+
+/* color:  #0153cf; */
+
+.section.featured {
+    background-color: #0153cf;
+}
+
+
