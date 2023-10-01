@@ -89,7 +89,7 @@ body {
 /* Welcome Section */
 
 .section {
-    height: 100vh;
+    height: 95vh;
     overflow: hidden;
     position: relative;
 }
@@ -110,9 +110,8 @@ body {
     margin: auto;
     padding-top: 100px;
 }
-.section.featured .section-heading,
-.section.cta .section-heading,
-.section.welcome .section-heading {
+
+.section .section-heading {
     display: flex;
     justify-content: center;
 }
@@ -163,23 +162,55 @@ body {
 }
 
 /* Welcome to website section styles */
-
+.section.featured .content,
+.section.offers .content,
 .section.welcome .content {
     width: 80%;
     margin: auto;
 }
 
+.section h2 {
+    transition: all .3s ease-in-out;
+    position: relative;
+    padding: 0 1.2em;
+    font: bold 40px/1.5 Cairo;
+}
+
+.section h2:after {
+    content: "";
+    transition: all .3s ease-in-out;
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;left: 0;
+}
+
+.section.offers h2:after,
+.section.welcome h2:after {
+    background-color: #0153cfaa;
+}
+.cta h2:after,
+.featured h2:after {
+    background-color: #ffffffaa;
+}
+
+
+
+.section.cta .section-heading h2,
 .section.featured .section-heading h2 {
     color: #ffffff ;
 }
 
+
+.section.offers .section-heading h2,
 .section.welcome .section-heading h2 {
-    color: #0153cf ;
+    color: #0153cfaa ;
 }
 
-.section ul.items {
+/* .section ul.items {
     /* border: 1px solid #ccc; */
-}
+/* }  */
 
 .section ul.items li.item {
     display: inline-block;
@@ -196,13 +227,13 @@ body {
     font-size: 2.4em;
     text-align: center;
     padding: 0.3em;
-    color: #0066ff;
+    color: #5e5e5e;
     
 }
 .section ul.items li.item:before {
     content: "";
     display: block;
-    background-color: #444;
+    background-color: #0153cf6e;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -221,41 +252,155 @@ body {
     font: 700 24px/1.5 Cairo;
     text-align: center;
     text-transform: uppercase;
-    color:  #0153cf;
+    color:  #5e5e5e;
 }
 
 
 .section ul.items li.item .item-feature p {
     padding: 0 1.2em;
-    color:  #0066ff;
+    color:  #5e5e5e;
     text-align: justify;
 }
 
 .section ul.items li.item .item-link {
-    display: inline-block;
-    float: right;
-    margin: 1em 2em;
+    overflow: hidden;
+    text-align: right;
+    padding: 20px;
+}
+
+.section ul.items li.item .item-link button {
     border: 1px solid #ccc;
     background-color: #fff;
     padding: 8px 18px;
-    color: #0066ff;
+    background-color: #5e5e5e;
+    color: #fff;
+    transition: all 0.6s .3s ease-in-out;
 }
 .section.welcome ul.items li.item:hover .item-icon,
 .section.welcome ul.items li.item:hover .item-title h3,
 .section.welcome ul.items li.item:hover .item-feature p,
 .section.welcome ul.items li.item:hover .item-link{
     color: #fff;
-    transition: all 0.3s .3s ease-in-out;
+    
 }
-.section.welcome ul.items li.item:hover .item-link {
-    background-color: #0066ff;
+.section.welcome ul.items li.item:hover .item-link button {
+    background-color: #fff;
+    color: #0153cf;
     cursor: pointer;
 }
 
 /* color:  #0153cf; */
 
 .section.featured {
-    background-color: #0153cf;
+    background-color: #043b8da8;
+    height: 125vh;
+}
+
+.section.featured ul.items li.item {
+    margin-bottom: 2em;
+    background-size: 100% auto;
+    transition: all .5s ease-in-out;
+}
+
+.section.featured ul.items li.item:nth-child(1) {
+    background-image: url('files/images/team-5.jpg');
+}
+
+.section.featured ul.items li.item:nth-child(2) {
+    background-image: url('files/images/team-4.jpg');
+}
+
+.section.featured ul.items li.item:nth-child(3) {
+    background-image: url('files/images/marie.jpg');
+}
+
+.section.featured ul.items li.item:nth-child(4) {
+    background-image: url('files/images/ivana-square.jpg');
+}
+
+.section.featured ul.items li.item:nth-child(5) {
+    background-image: url('files/images/ivana-squares.jpg');
+}
+
+.section.featured ul.items li.item:nth-child(6) {
+    background-image: url('files/images/bruce-mars.jpg');
+}
+
+.section.featured ul.items li.item:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0%;
+    background-color: #00000055;
+    transition: all .5s ease-in-out;
+}
+.section.featured ul.items li.item:hover:before {
+    height: 100%;
+}
+.section.featured ul.items li.item .item-title h3 {
+    padding-top: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.section.featured ul.items li.item .item-feature p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font: 600 18px /1.2 Cairo;
+}
+.section.featured ul.items li.item .item-buttons {
+    text-align: center;
+    padding: 1em;
+}
+
+.section.featured ul.items li.item .item-buttons i {
+    font-size: 30px;
+    padding: 4px;
+    color: aliceblue;
+    border: 1px solid aliceblue
+}
+
+.section.featured ul.items li.item .item-title h3,
+.section.featured ul.items li.item .item-feature p,
+.section.featured ul.items li.item .item-buttons {
+    transition: all .5s .3s ease-in-out;
+    opacity: 0;
+}
+.section.featured ul.items li.item:hover .item-title h3,
+.section.featured ul.items li.item:hover .item-feature p,
+.section.featured ul.items li.item:hover .item-buttons {
+    opacity: 1;
+}
+.section.featured ul.items li.item:hover {
+    background-size: 105%;
+    background-position: 5% 5%;
+}
+
+/* Offers Section Styles */
+
+.section.offers ul li.item {
+    padding-top: 2em;
+    height: 200px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.section.offers ul li.item h3 {
+    display: inline-block;
+}
+
+.section.offers ul li.item .item-title i {
+    font-size: 30px;
 }
 
 
+.section.offers ul li.item:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+background-color: #fff;
+}
+.section.offers ul li.item:hover:before {
+    height: 100%
+}
