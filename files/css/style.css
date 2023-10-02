@@ -547,117 +547,122 @@ background-color: #fff;
 /* Pricing Section Styles */
 
 .section.pricing .content {
-padding: 40px 0;
+    padding: 40px 0;
 }
 
-.section.pricing  .pricing-items {
-width: 900px;
-margin: 40px auto;
+.section.pricing .pricing-items {
+    width: 900px;
+    margin: 40px auto;
 }
 
 .section.pricing .pricing-items .item {
-display: inline-block;
-width: 280px;
-border: 2px solid #00408855;
-margin: 0 8px 18px;
-white-space: 0;
-background-color: #efefef;
+    display: inline-block;
+    width: 280px;
+    border: 2px solid #00408855;
+    margin: 0 8px 18px;
+    white-space: 0;
+    background-color: #efefef;
 }
 
 .section.pricing .pricing-items .item .item-title {
-font-weight: bold;
-text-align: center;
-font-size: 22px;
-margin: 8px auto 16px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    margin: 8px auto 16px;
 }
 
 .section.pricing .pricing-items .item .item-price {
-font-weight: bold;
-font-size: 50px;
-text-align: center;
-width: 100px;
-height: 100px;
-line-height: 100px;
-border-radius: 50%;
-border: 2px solid #004080;
-margin: auto;
-color: #004080;
-background-color: #00408022;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    border: 2px solid #004080;
+    margin: auto;
+    color: #004080;
+    background-color: #00408022;
 }
 
 .section.pricing .pricing-items .item .item-price span {
-color: #004080;
+    color: #004080;
 }
 
 .section.pricing .pricing-items .item .item-price-caption {
-text-align: center;
-font-size: 9px;
-color: #004080;
-margin-bottom: 40px;
+    text-align: center;
+    font-size: 9px;
+    color: #004080;
+    margin-bottom: 40px;
 }
 
 .section.pricing .pricing-items .item .item-feature {
-text-align: center;
-color: #00408055;
+    text-align: center;
+    color: #00408055;
 }
 
 .section.pricing .pricing-items .item .item-feature:hover {
 
-color: #004080;
-background-color: #00408022;
+    color: #004080;
+    background-color: #00408022;
 }
 
 .section.pricing .pricing-items .item .item-button {
-width: 120px;
-margin: 50px auto 24px;
-border: 1px solid #004080;
-text-align: center;
-outline: 1px solid #004080;
-background-color: #004080;
-color: #fff;
-outline-offset: 2px;
+    width: 120px;
+    margin: 50px auto 24px;
+    border: 1px solid #004080;
+    text-align: center;
+    outline: 1px solid #004080;
+    background-color: #004080;
+    color: #fff;
+    outline-offset: 2px;
 }
 
 /* Testimonials Section Styles */
 .section.testimonials .content {
-position: relative;
+    position: relative;
+    overflow: hidden;
+}
+
+.section.testimonials .persons {
+    margin: 100px auto ;
+    text-align: center;
 }
 
 .section.testimonials .person {
-display: inline-block;
-width: 300px;
-overflow: hidden;
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+    color: #fff;
 }
 
 .section.testimonials .person .person-img,
 .section.testimonials .person .person-name {
-display: inline-block;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .section.testimonials .person .person-img {
-width: 50px;
-height: 50px;
-border-radius: 50%;
-overflow: hidden;
+    width: 66px;
+    height: 66px;
+    padding: 8px;
 }
 
 .section.testimonials .person .person-img img {
-height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    height: 100%;
 }
 
 .section.testimonials .person .person-name h3 {
-font: bold 20px/1 Cairo;
-border: 1px solid;
-vertical-align: top;
-padding: 0 0.6em
+    font: bold 20px/1.5 Cairo;
+    padding: 6px 10px
 }
 
 
-.section.testimonials .person .person-name h3 {
-font: bold 20px/1 Cairo;
-border: 1px solid;
-vertical-align: top;
-padding: 0 0.6em
+.section.testimonials .person .person-name p {
+    font: bold 12px/1.5 Cairo;
+    padding: 0 10px
 }
 
 
