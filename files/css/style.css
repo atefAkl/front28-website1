@@ -95,7 +95,7 @@ body {
 }
 
 .section.cta {
-    background: url('files/images/spmUM.png');
+    background: url('../images/spmUM.png');
     background-size: contain;
     background-attachment: fixed;
 }
@@ -162,9 +162,7 @@ body {
 }
 
 /* Welcome to website section styles */
-.section.featured .content,
-.section.offers .content,
-.section.welcome .content {
+.content {
     width: 80%;
     margin: auto;
 }
@@ -174,6 +172,7 @@ body {
     position: relative;
     padding: 0 1.2em;
     font: bold 40px/1.5 Cairo;
+    text-transform: uppercase;
 }
 
 .section h2:after {
@@ -185,24 +184,26 @@ body {
     height: 100%;
     top: 0;left: 0;
 }
-
-.section.offers h2:after,
-.section.welcome h2:after {
+.section.pricing .section-heading h2:after,
+.section.offers .section-heading h2:after,
+.section.welcome .section-heading h2:after {
     background-color: #0153cfaa;
 }
 .cta h2:after,
+.section.team .section-heading h2:after,
 .featured h2:after {
-    background-color: #ffffffaa;
+    background-color: #f8f8f8aa;
 }
 
 
 
+.section.team .section-heading h2,
 .section.cta .section-heading h2,
 .section.featured .section-heading h2 {
     color: #ffffff ;
 }
 
-
+.section.pricing .section-heading h2,
 .section.offers .section-heading h2,
 .section.welcome .section-heading h2 {
     color: #0153cfaa ;
@@ -291,11 +292,13 @@ body {
 
 /* color:  #0153cf; */
 
+.section.team,
 .section.featured {
     background-color: #043b8da8;
     height: 125vh;
 }
 
+.section.team ul.items li.item,
 .section.featured ul.items li.item {
     margin-bottom: 2em;
     background-size: 100% auto;
@@ -303,29 +306,54 @@ body {
 }
 
 .section.featured ul.items li.item:nth-child(1) {
-    background-image: url('files/images/team-5.jpg');
+    background-image: url('../images/team-5.jpg');
 }
 
 .section.featured ul.items li.item:nth-child(2) {
-    background-image: url('files/images/team-4.jpg');
+    background-image: url('../images/team-4.jpg');
 }
 
 .section.featured ul.items li.item:nth-child(3) {
-    background-image: url('files/images/marie.jpg');
+    background-image: url('../images/marie.jpg');
 }
 
 .section.featured ul.items li.item:nth-child(4) {
-    background-image: url('files/images/ivana-square.jpg');
+    background-image: url('../images/ivana-square.jpg');
 }
 
 .section.featured ul.items li.item:nth-child(5) {
-    background-image: url('files/images/ivana-squares.jpg');
+    background-image: url('../images/ivana-squares.jpg');
 }
 
 .section.featured ul.items li.item:nth-child(6) {
-    background-image: url('files/images/bruce-mars.jpg');
+    background-image: url('../images/bruce-mars.jpg');
 }
 
+.section.team ul.items li.item:nth-child(1) {
+    background-image: url('../images/f1.png');
+}
+
+.section.team ul.items li.item:nth-child(2) {
+    background-image: url('../images/f2.png');
+}
+
+.section.team ul.items li.item:nth-child(3) {
+    background-image: url('../images/f3.jpg');
+}
+
+.section.team ul.items li.item:nth-child(4) {
+    background-image: url('../images/f4.jpg');
+}
+
+.section.team ul.items li.item:nth-child(5) {
+    background-image: url('../images/f5.png');
+}
+
+.section.team ul.items li.item:nth-child(6) {
+    background-image: url('../images/f6.jpg');
+}
+
+.section.team ul.items li.item:before ,
 .section.featured ul.items li.item:before {
     content: "";
     display: block;
@@ -334,24 +362,35 @@ body {
     background-color: #00000055;
     transition: all .5s ease-in-out;
 }
+
+.section.team ul.items li.item:hover:before,
 .section.featured ul.items li.item:hover:before {
     height: 100%;
 }
+
+
+.section.team ul.items li.item .item-title h3 {
+    padding-top: 20%;
+    color: rgb(255, 255, 255);
+}
 .section.featured ul.items li.item .item-title h3 {
-    padding-top: 2em;
+    padding-top: 50%;
     color: rgb(255, 255, 255);
 }
 
+.section.team ul.items li.item .item-feature p,
 .section.featured ul.items li.item .item-feature p {
     color: rgb(255, 255, 255);
     text-align: center;
     font: 600 18px /1.2 Cairo;
 }
+.section.team ul.items li.item .item-buttons,
 .section.featured ul.items li.item .item-buttons {
     text-align: center;
     padding: 1em;
 }
 
+.section.team ul.items li.item .item-buttons i,
 .section.featured ul.items li.item .item-buttons i {
     font-size: 30px;
     padding: 4px;
@@ -359,17 +398,25 @@ body {
     border: 1px solid aliceblue
 }
 
+.section.team ul.items li.item .item-title h3,
+.section.team ul.items li.item .item-feature p,
+.section.team ul.items li.item .item-buttons,
 .section.featured ul.items li.item .item-title h3,
 .section.featured ul.items li.item .item-feature p,
 .section.featured ul.items li.item .item-buttons {
     transition: all .5s .3s ease-in-out;
     opacity: 0;
 }
+.section.team ul.items li.item:hover .item-title h3,
+.section.team ul.items li.item:hover .item-feature p,
+.section.team ul.items li.item:hover .item-buttons,
 .section.featured ul.items li.item:hover .item-title h3,
 .section.featured ul.items li.item:hover .item-feature p,
 .section.featured ul.items li.item:hover .item-buttons {
     opacity: 1;
 }
+
+.section.team ul.items li.item:hover,
 .section.featured ul.items li.item:hover {
     background-size: 105%;
     background-position: 5% 5%;
@@ -404,3 +451,213 @@ background-color: #fff;
 .section.offers ul li.item:hover:before {
     height: 100%
 }
+
+/* Why Us section styles */
+
+.section.us {
+    background-color: #ccc;
+}
+
+.section.us .content {
+    padding: 15vh 0;
+}
+
+.section.us .content .half {
+    text-align: left;
+    display: inline-block;
+    gap: 0;
+    width: 49%;
+    height: 60vh;
+}
+
+.section.us .content .half.right {
+    background-image: url('../images/room.jpg');
+    background-size: contain;
+    background-clip: padding-box;
+}
+
+.section.us .content .half .section-heading {
+    display: block;
+    margin-top: 0;
+}
+
+.section.us .content .half p {
+    width: 90%;
+    margin: 30px 0;
+    font: 200 20px/1.4 "Cairo";
+}
+
+.section.us .half ul li.feature {
+    font: 500 22px/1.4 "Cairo";
+    color: rgb(18, 83, 47);
+    margin-bottom: 8px;
+}
+
+.section.us .half ul li i {
+    color: #44aa55;
+    padding: 4px;
+    border: 2px solid;
+}
+
+.section.us .content .half .section-heading h2 {
+    color: #0847a5;
+    padding: 0;
+}
+
+/* Sales Section Styles */
+
+.section.sales {
+    height: 50vh;
+    background: url('../images/bg1.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.section.sales .overlay {
+    background: #000000d1;
+    color: #fff;
+}
+
+
+.section.sales .sale {
+    display: inline-block;
+    width: 24.5%;
+    margin-top: 70px;
+}
+
+.section.sales .sale i {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+}
+
+.section.sales .sale span.number {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 16px auto; 
+    font-size: 3em;
+}
+
+.section.sales .sale p {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/* Pricing Section Styles */
+
+.section.pricing .content {
+padding: 40px 0;
+}
+
+.section.pricing  .pricing-items {
+width: 900px;
+margin: 40px auto;
+}
+
+.section.pricing .pricing-items .item {
+display: inline-block;
+width: 280px;
+border: 2px solid #00408855;
+margin: 0 8px 18px;
+white-space: 0;
+background-color: #efefef;
+}
+
+.section.pricing .pricing-items .item .item-title {
+font-weight: bold;
+text-align: center;
+font-size: 22px;
+margin: 8px auto 16px;
+}
+
+.section.pricing .pricing-items .item .item-price {
+font-weight: bold;
+font-size: 50px;
+text-align: center;
+width: 100px;
+height: 100px;
+line-height: 100px;
+border-radius: 50%;
+border: 2px solid #004080;
+margin: auto;
+color: #004080;
+background-color: #00408022;
+}
+
+.section.pricing .pricing-items .item .item-price span {
+color: #004080;
+}
+
+.section.pricing .pricing-items .item .item-price-caption {
+text-align: center;
+font-size: 9px;
+color: #004080;
+margin-bottom: 40px;
+}
+
+.section.pricing .pricing-items .item .item-feature {
+text-align: center;
+color: #00408055;
+}
+
+.section.pricing .pricing-items .item .item-feature:hover {
+
+color: #004080;
+background-color: #00408022;
+}
+
+.section.pricing .pricing-items .item .item-button {
+width: 120px;
+margin: 50px auto 24px;
+border: 1px solid #004080;
+text-align: center;
+outline: 1px solid #004080;
+background-color: #004080;
+color: #fff;
+outline-offset: 2px;
+}
+
+/* Testimonials Section Styles */
+.section.testimonials .content {
+position: relative;
+}
+
+.section.testimonials .person {
+display: inline-block;
+width: 300px;
+overflow: hidden;
+}
+
+.section.testimonials .person .person-img,
+.section.testimonials .person .person-name {
+display: inline-block;
+}
+
+.section.testimonials .person .person-img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.section.testimonials .person .person-img img {
+height: 100%;
+}
+
+.section.testimonials .person .person-name h3 {
+font: bold 20px/1 Cairo;
+border: 1px solid;
+vertical-align: top;
+padding: 0 0.6em
+}
+
+
+.section.testimonials .person .person-name h3 {
+font: bold 20px/1 Cairo;
+border: 1px solid;
+vertical-align: top;
+padding: 0 0.6em
+}
+
+
