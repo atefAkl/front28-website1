@@ -167,9 +167,9 @@ body {
 }
 
 .section h2 {
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     position: relative;
-    padding: 0 1.2em;
+    padding: 0 0.5em;
     font: bold 40px/1.5 Cairo;
     text-transform: uppercase;
 }
@@ -179,9 +179,9 @@ body {
     transition: all .3s ease-in-out;
     display: block;
     position: absolute;
-    width: 10px;
-    height: 100%;
-    top: 0;left: 0;
+    height: 10px;
+    width: 100px;
+    top: 100%;left: 0;
 }
 .section.pricing .section-heading h2:after,
 .section.offers .section-heading h2:after,
@@ -195,6 +195,9 @@ body {
 }
 
 
+.section h2:hover:after {
+    width: 100%;
+}
 
 .section.team .section-heading h2,
 .section.cta .section-heading h2,
